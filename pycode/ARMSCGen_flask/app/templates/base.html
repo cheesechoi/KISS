@@ -1,0 +1,53 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{title}} - ARMSCGen</title>
+        {% else %}
+        <title>ARMSCGen</title>
+        {% endif %}
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/pure-min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/skin-mine.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/dotbox.css') }}">
+        {#
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/prettify.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/colorbox.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"> 
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/starter-template.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-responsive.min.css') }}">
+        #}
+        <script type=text/javascript src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+
+    </head>
+    <body class="pure-skin-mine">
+        <div class="pure-g">
+             <div class="pure-u-22-24" id="dotbox">
+                <div class="pure-menu pure-menu-open pure-menu-horizontal">
+                    <a href="/" class="pure-menu-heading">Shellcode Generator</a>
+                    <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <li><a href="/about">about</a></li>
+                    </ul>
+                </div>
+        {#
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        #}
+        {% block content %} {% endblock %}
+            </div>
+        </div>
+    </body>
+    <div class="footer l-box is-center">
+        <p class="copyright">
+        &copy; 2014 - Powered by <a href="/about">ARMSCGen</a> | <a href="http://armscgen.readthedocs.org/">Documentation</a>
+        </p>
+    </div>
+</html>

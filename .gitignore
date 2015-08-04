@@ -1,0 +1,21 @@
+# ignore some files to avoid to upload to GITHUB
+
+*.o
+*.hi
+*.pyc
+*~
+*.pdf
+*/auto/*
+*/bin/*
+build
+MANIFEST
+dist
+pwntools.egg-info
+.gdb_history
+temp
+*.swp
+*.bak
+*.m32
+*.m64
+*.arm32
+*.arm64

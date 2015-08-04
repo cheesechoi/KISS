@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content">
+<pre>
+{{ result|safe }}
+<table border=0 width=150 align=left style="border:0px solid gray">
+<tr><td>Thumb Mode</td></tr>
+{%- for t in thumb -%}
+<tr>
+<td><a href="/thumb/{{t}}">{{t}}</a></td>
+</tr>
+{%- endfor -%}
+</table>
+</pre>
+</div>
+{% endblock %}
